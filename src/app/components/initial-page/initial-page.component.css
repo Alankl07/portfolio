@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?fomily=Poppins:100,200,300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tagbanwa&family=Orbitron:wght@700&family=Press+Start+2P&family=Roboto:wght@300;700&family=Zeyada&display=swap');
+
+.divContainer {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    background: #333;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 180px;
+    margin-top: 50px;
+    background-color: #333;
+    transition: 0.5s;
+}
+
+.card:hover {
+    height: 450px;
+    margin-top: 0px;
+}
+
+.card .lines {
+    position: absolute;
+    inset: 0;
+    background: #000;
+    overflow: hidden;
+}
+
+.card .lines::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 120px;
+    background: linear-gradient(transparent, #0000FF, #0000FF, #0000FF, #0000FF, transparent);
+    animation: animate 4s linear infinite;
+    animation-play-state: paused;
+}
+
+.card .lines::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #292929;
+}
+
+.card:hover .lines::before {
+    animation-play-state: running;
+}
+
+.card .imgBx {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    transform: translateX(-50%);
+    background: #000;
+    transition: 0.5s;
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover .imgBx {
+    top: 15px;
+    width: 200px;
+    height: 200px;
+}
+
+.card .imgBx::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(transparent, #fff, #fff, #fff, transparent);
+    animation: animate2 6s linear infinite;
+    animation-play-state: paused;
+}
+
+.card .imgBx::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #292929;
+}
+
+.card:hover .imgBx::before {
+    animation-play-state: running;
+}
+
+.card .imgBx img {
+    position: absolute;
+    height: 98%;
+    width: 98%;
+    z-index: 1;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.card:hover .imgBx img {
+    opacity: 1;
+}
+
+.card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card .content .details .divStacks{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 40px;
+    opacity: 0;
+}
+
+.card .content .details .divStacks img{
+    margin-right: 5px;
+    padding-bottom: 10px;
+}
+
+.card:hover .content .details .divStacks{
+    opacity: 1;
+}
+
+.card .content .details small{
+    position: absolute;
+    right: 10px;
+    top: 45px;
+    text-decoration: underline;
+    font-weight: 500;
+    color: #45f3ff;
+    line-height: 1.2em;
+    transition: 0.3s;
+}
+
+.card:hover .content .details small{
+    opacity: 0;
+}
+
+.card .content .details {
+    width: 100%;
+    text-align: center;
+    transition: 0.5s;
+    transform: translateY(100px);
+}
+
+.card:hover .content .details {
+    transform: translateY(90px);
+}
+
+.card .content .details h2 {
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.2em;
+    transition: 0.3s;
+}
+
+.card .content .details p {
+    position: relative;
+    color: #fff;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card:hover .content .details p {
+    text-align: justify;
+    padding: 10px;
+    opacity: 1;
+}
+
+.card .content .details a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #45f3ff;
+    color: #292929;
+    margin-top: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card:hover .content .details a {
+    opacity: 1;
+    margin-bottom: 20px;
+}
+
+.divContainer .divApresentation {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+    height: 40%; 
+    color: #fff;
+}
+
+.divContainer .divApresentation .divMe h2 {
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: 'Press Start 2P', cursive;
+    animation: cursor 500ms steps(28) normal, type 2s steps(28) normal both;
+}
+
+.divContainer .divApresentation .divAbautMe p{
+    margin-left: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: 'Press Start 2P', cursive;
+    animation: cursor2 500ms steps(28) infinite normal, type2 2s steps(28) normal both;
+}
+ 
+@keyframes cursor {
+    from {
+        border-right: 2px solid rgba(255, 255, 255, 0.75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes type {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 21em;
+    }
+}
+
+@keyframes cursor2 {
+    from {
+        border-right: 2px solid rgba(255, 255, 255, 0.75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes type2 {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 61em;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
