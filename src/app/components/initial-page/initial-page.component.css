@@ -231,6 +231,68 @@
     font-family: 'Press Start 2P', cursive;
     animation: cursor2 500ms steps(28) infinite normal, type2 2s steps(28) normal both;
 }
+
+.divContainer .divApresentation .divSocialNetwork a{
+    position: relative;
+    margin-right: 10px;
+    top: 30px;
+}
+
+.divContainer .divApresentation .divButton:hover{
+    cursor: pointer;
+}
+
+.divContainer .divApresentation .divButton{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    margin-bottom: 100px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1.5px solid #fff;
+    font-size: 30pt;
+    animation: teste 2s infinite normal ;
+}
+
+.divContainer .divApresentation .divButton i{
+    animation: arrow 2s infinite normal ;
+}
+
+@keyframes arrow {
+    0% {
+        position: relative;
+        top: 0;
+    }
+
+    50% {
+        position: relative;
+        top: 20px;
+    }
+
+    100%{
+        position: relative;
+        top: 0;
+    }
+}
+
+@keyframes teste {
+    0% {
+        opacity: .6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100%{
+        opacity: .6;
+    }
+}
  
 @keyframes cursor {
     from {

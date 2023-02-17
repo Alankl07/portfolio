@@ -12,4 +12,8 @@ export class InitialPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scroll(){
+    window.alert("Essa parte está em desenvolvimento.")
+  }
+
 }
