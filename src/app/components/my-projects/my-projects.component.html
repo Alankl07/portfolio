@@ -1,0 +1,29 @@
+<div class="divContainer" id="myProject">
+    <div (click)="goBack()" class="arrow">{{arrowLeft}}</div>
+    <div *ngFor="let project of projects; let i = index" class="divContent">
+        <div *ngIf="projectShow == i" class="card">
+            <div class="divImg">
+                <img src="{{project.image}}" alt="">
+                <div class="ligth"></div>
+            </div>
+            <div class="divDescription">
+                <div class="title">
+                    <h2>{{project.nameProject}}</h2>
+                </div>
+                <div class="description">
+                    <label>{{project.description}}</label>
+                </div>
+                <div class="footer">
+                    <a *ngIf="project.linkPage" href="{{project.linkPage}}" class="linkPage" target="_blank">
+                        <small>Visite {{project.nameProject}}</small>
+                    </a>
+                    <a *ngIf="project.gitHub" href="{{project.gitHub}}" target="_blank">
+                        <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
+                            alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div (click)="next()" class="arrow">></div>
+</div>
