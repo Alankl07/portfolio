@@ -7,13 +7,15 @@ import { InitialPageComponent } from './components/initial-page/initial-page.com
 import { MyProjectsComponent } from './components/my-projects/my-projects.component';
 import { GameAreaComponent } from './components/game-area/game-area.component';
 import { QRCodeModule } from 'angularx-qrcode';
+import { PageControlComponent } from './components/page-control/page-control.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InitialPageComponent,
     MyProjectsComponent,
-    GameAreaComponent
+    GameAreaComponent,
+    PageControlComponent
   ],
   imports: [
     BrowserModule,

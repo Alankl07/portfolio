@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tagbanwa&family=Orbitron:wght@700&family=Press+Start+2P&family=Roboto:wght@300;700&family=Zeyada&display=swap');
+
+.divContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.buttonsLeft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 70%;
+    height: 75%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle button{
+    background-color: transparent;
+    border: 0;
+}
+
+.circle .top{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 40%;
+    height: 40%;
+}
+
+.circle i{
+    transform: scale(6);
+}
+
+.circle .rigth{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    width: 40%;
+    height: 40%;
+    border-top-left-radius: 50% ;
+}
+
+.circle .down{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 40%;
+    height: 40%;
+}
+
+.circle .left{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    width: 40%;
+    height: 40%;
+}
+
+.divCenter{
+    position: relative;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+}
+
+.divCenter i{
+    position: relative;
+    margin-top: 180px;
+    transform: scale(3);
+}
+
+.divCenter i:hover{
+    cursor: pointer;
+}
+
+.divCenter label{
+    font-size: larger;
+    align-self: center;
+    margin-top: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.buttonsRigth{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 85%;
+    border-radius: 50%;
+    background-color: rgb(71, 71, 71);
+}
+
+.buttonsRigth .buttonTop{
+    position: relative;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 25%;
+    width: 60%;
+    justify-content: space-around;
+    border-radius: 20px;
+    background-color: rgb(118, 118, 118);
+    transform: rotate(-20deg);
+}
+
+.buttonsRigth .buttonDown{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 40px;
+    width: 60%;
+    margin-left: 50px;
+    margin-top: 10px;
+    height: 25%;
+    border-radius: 20px;
+    background-color: rgb(118, 118, 118);
+    transform: rotate(-20deg);
+}
+
+.buttonA{
+    width: 35%;
+    height: 90%;
+    border-radius: 50%;
+    border: 0;
+    font-size: xx-large;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    background-color: green;
+}
+
+.buttonB{
+    width: 35%;
+    height: 90%;
+    border-radius: 50%;
+    border: 0;
+    font-size: xx-large;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    background-color: blue;
+}
+
+.buttonC{
+    width: 35%;
+    height: 90%;
+    border-radius: 50%;
+    border: 0;
+    font-size: xx-large;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    background-color: darkgoldenrod;
+}
+
+.buttonD{
+    width: 35%;
+    height: 90%;
+    border-radius: 50%;
+    border: 0;
+    font-size: xx-large;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    background-color: red;
+}
