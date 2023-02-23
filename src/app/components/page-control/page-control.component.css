@@ -50,7 +50,7 @@
     transform: scale(6);
 }
 
-.circle .rigth{
+.circle .right{
     position: absolute;
     display: flex;
     align-items: center;
@@ -109,7 +109,7 @@
     font-family: 'Orbitron', sans-serif;
 }
 
-.buttonsRigth{
+.buttonsRight{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,7 +120,7 @@
     background-color: rgb(71, 71, 71);
 }
 
-.buttonsRigth .buttonTop{
+.buttonsRight .buttonTop{
     position: relative;
     right: 20px;
     display: flex;
@@ -134,7 +134,7 @@
     transform: rotate(-20deg);
 }
 
-.buttonsRigth .buttonDown{
+.buttonsRight .buttonDown{
     display: flex;
     align-items: center;
     justify-content: space-around;

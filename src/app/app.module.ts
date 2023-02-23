@@ -8,6 +8,7 @@ import { MyProjectsComponent } from './components/my-projects/my-projects.compon
 import { GameAreaComponent } from './components/game-area/game-area.component';
 import { QRCodeModule } from 'angularx-qrcode';
 import { PageControlComponent } from './components/page-control/page-control.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PageControlComponent } from './components/page-control/page-control.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    QRCodeModule
+    QRCodeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

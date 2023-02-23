@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
+import socket from 'src/socket/socket';
+// import { Socket } from 'ngx-socket-io';
 
 @Component({
   selector: 'app-page-control',
@@ -10,28 +12,41 @@ export class PageControlComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.emitTheConnection()
+  }
+  
+  emitTheConnection(){
+    socket.emit("controlConect")
   }
 
-  move(direction: string){
+  actionMove(direction: string) {
+    socket.emit('actionMove', { key: direction })
     this.responseClick(direction)
   }
 
-  start(){
+  actionButton(direction: string) {
+    socket.emit('actionButton', { key: direction })
+    this.responseClick(direction)
+  }
+
+  start() {
+    socket.emit('startGame')
     this.responseClick('start')
   }
 
-  actions(action: string){
+  actions(action: string) {
+    this.actionButton(action)
     this.responseClick(action)
   }
 
-  responseClick(id: string){
+  responseClick(id: string) {
     const element = document.getElementById(id)
-    if(element){
+    if (element) {
       element.style.opacity = '.3'
       element.style.transition = '.2s'
-    setTimeout(() => {
-      element.style.opacity = '1'
-    }, 200);
+      setTimeout(() => {
+        element.style.opacity = '1'
+      }, 200);
     }
   }
 

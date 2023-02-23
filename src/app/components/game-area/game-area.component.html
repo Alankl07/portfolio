@@ -1,7 +1,22 @@
 <div class="divContainer" id="gameArea">
-    <div class="divQrCode">
-        <qrcode [qrdata]="'http://10.0.0.104:4200/control'" [width]="400" [errorCorrectionLevel]="'M'" ></qrcode>
+    <div *ngIf="!controlConnect" class="divQrCode" #container>
+        <qrcode [qrdata]="'http://10.0.0.104:4200/control'" [width]="400" [errorCorrectionLevel]="'M'"></qrcode>
         <label>Scanei o QRcode acima.</label>
-    </div> 
-    <div class="divTv"></div>
+    </div>
+    <div *ngIf="controlConnect" class="divContainerTv">
+        <div class="divTv">
+            <label class="logoTv">KL07</label>
+            <div class="screen">
+                <div class="pixel" id="divPixel"></div>
+                <div class="pixel2" id="divPixel2"></div>
+            </div>
+        </div>
+        <div class="dataTv">
+            <label></label>
+            <label>KL07</label>
+            <label class="ledTv"></label>
+        </div>
+    </div>
+    <button id="showTv" style="display: none;" (click)="showTv()"></button>
+    <button id="showQrCode" style="display: none;" (click)="showQrCode()"></button>
 </div>
