@@ -62,6 +62,7 @@
     height: 20px;
     background-color: #000;
     position: relative;
+    opacity: 0;
     top: 0%;
     left: 0%;
     right: 0%;
@@ -78,7 +79,7 @@
     left: -1.9%;
     right: 0%;
     bottom: 0%;
-    opacity: 1;
+    opacity: 0;
 }
 
 .divTv{
@@ -100,8 +101,8 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-color: #000;
-    animation: screenAnim 6s normal both;
+    background-color: #fff;
+    /* animation: screenAnim 6s normal both; */
 }
 
 .logoTv{
@@ -117,7 +118,38 @@
     z-index: 1 ;
     background-color: #000;
     transition: 1s;
-    animation: animationTv 4s normal both ;
+    /* animation: animationTv 4s normal both ; */
+}
+
+.scoreboard{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.pressStart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    transform: scale(2);
+    transition: 2s;
+    animation: animeStart 2s infinite normal both;
+}
+
+@keyframes animeStart{
+    0%{
+        opacity: .9;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: .9;
+    }
 }
 
 @keyframes screenAnim {
