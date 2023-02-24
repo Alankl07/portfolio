@@ -1,0 +1,24 @@
+<div class="divContainer" id="gameArea">
+    <div *ngIf="!controlConnect" class="divQrCode" #container>
+        <qrcode [qrdata]="'https://alankl07.github.io/portfolio/control'" [width]="400" [errorCorrectionLevel]="'M'"></qrcode>
+        <label>Scanei o QRcode acima.</label>
+    </div>
+    <div *ngIf="controlConnect" class="divContainerTv">
+        <div class="divTv">
+            <label class="logoTv">KL07</label>
+            <div class="screen">
+                <label class="pressStart" id="pressStart" >PRESS START</label>
+                <label class="scoreboard" id="scoreboard" >{{scoreboard}}</label> 
+                <div class="pixel" id="divPixel"></div>
+                <div class="pixel2" id="divPixel2"></div>
+            </div>
+        </div>
+        <div class="dataTv">
+            <label></label>
+            <label>KL07</label>
+            <label class="ledTv"></label>
+        </div>
+    </div>
+    <button id="showTv" style="display: none;" (click)="showTv()"></button>
+    <button id="showQrCode" style="display: none;" (click)="showQrCode()"></button>
+</div>

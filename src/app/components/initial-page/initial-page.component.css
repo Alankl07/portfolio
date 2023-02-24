@@ -4,7 +4,7 @@
 .divContainer {
     display: flex;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     padding: 20px;
     background: #333;
 }
@@ -168,11 +168,12 @@
 
 .card .content .details h2 {
     position: relative;
-    font-size: 1.5em;
+    font-size: larger;
     font-weight: 500;
     color: #fff;
     line-height: 1.2em;
     transition: 0.3s;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .card .content .details p {
@@ -227,9 +228,8 @@
     margin-left: 10px;
     margin-top: 10px;
     overflow: hidden;
-    white-space: nowrap;
     font-family: 'Press Start 2P', cursive;
-    animation: cursor2 500ms steps(28) infinite normal, type2 2s steps(28) normal both;
+    animation: aboutMe 2s steps(28) normal
 }
 
 .divContainer .divApresentation .divSocialNetwork a{
@@ -257,6 +257,8 @@
     border: 1.5px solid #fff;
     font-size: 30pt;
     animation: teste 2s infinite normal ;
+    text-decoration: none;
+    color: #fff;
 }
 
 .divContainer .divApresentation .divButton i{
@@ -314,23 +316,13 @@
     }
 }
 
-@keyframes cursor2 {
+@keyframes aboutMe {
     from {
-        border-right: 2px solid rgba(255, 255, 255, 0.75);
+        height: 0;
     }
 
     to {
-        border-right-color: transparent;
-    }
-}
-
-@keyframes type2 {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 61em;
+        height: 50px;
     }
 }
 

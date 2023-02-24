@@ -1,0 +1,1 @@
+export const testeFle = './assets/image/img-teste.png'

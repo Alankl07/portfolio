@@ -36,13 +36,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "150kb",
+                  "maximumError": "150kb"
                 }
               ],
               "fileReplacements": [
@@ -66,6 +66,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "portfolio:build",
+            "host": "0.0.0.0"
+          },
           "configurations": {
             "production": {
               "browserTarget": "portfolio:build:production"
