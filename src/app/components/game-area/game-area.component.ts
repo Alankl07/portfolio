@@ -1,8 +1,5 @@
-import { Component, Input, OnInit, Output, EventEmitter, ElementRef, ViewChild } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 import socket from 'src/socket/socket';
-import { PageControlComponent } from '../page-control/page-control.component';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-game-area',
@@ -15,7 +12,7 @@ export class GameAreaComponent implements OnInit {
   idInterval: any
   controlConnect = false
   scoreboard = 0
-  arrayPositions = [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48]
+  arrayPositions = [0, 6, 12, 18, 24, 30, 36, 42, 48]
   arrayColors = ['green', 'blue', 'yellow', 'red']
   pointColor: any = {
     'green': 10,
@@ -36,7 +33,7 @@ export class GameAreaComponent implements OnInit {
     color: 'black',
   }
 
-  TIME_10_SECOUND = 1000 * 10
+  TIME_SECOUND = 1000 * 7
 
   ngOnInit(): void {
     this.randomPosition()
@@ -62,7 +59,7 @@ export class GameAreaComponent implements OnInit {
     this.idInterval = setInterval(() => {
       this.randomPosition()
       this.movePixel2()
-    }, this.TIME_10_SECOUND)
+    }, this.TIME_SECOUND)
   }
 
   randomPosition() {
@@ -180,28 +177,28 @@ export class GameAreaComponent implements OnInit {
   }
 
   moveUp(element: HTMLElement) {
-    const position = Number(element.style.top.split('%')[0]) - 3
+    const position = Number(element.style.top.split('%')[0]) - 6
     if (!this.checkIfCanMove(position)) return
     element.style.top = `${position}%`
     this.currentPositionPlay.y = element.style.top
   }
 
   moveLeft(element: HTMLElement) {
-    const position = Number(element.style.left.split('%')[0]) - 3
+    const position = Number(element.style.left.split('%')[0]) - 6
     if (!this.checkIfCanMove(position)) return
     element.style.left = `${position}%`
     this.currentPositionPlay.x = element.style.left
   }
 
   moveRight(element: HTMLElement) {
-    const position = Number(element.style.left.split('%')[0]) + 3
+    const position = Number(element.style.left.split('%')[0]) + 6
     if (!this.checkIfCanMove(position)) return
     element.style.left = `${position}%`
     this.currentPositionPlay.x = element.style.left
   }
 
   moveDown(element: HTMLElement) {
-    const position = Number(element.style.top.split('%')[0]) + 3
+    const position = Number(element.style.top.split('%')[0]) + 6
     if (!this.checkIfCanMove(position)) return
     element.style.top = `${position}%`
     this.currentPositionPlay.y = element.style.top
