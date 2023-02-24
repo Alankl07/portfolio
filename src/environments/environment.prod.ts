@@ -1,4 +1,4 @@
 export const environment = {
-  socketUrl: 'https://socket-profile.cyclic.app',
+  socketUrl: 'https://ruby-cloudy-haddock.cyclic.app/',
   production: true
 };
