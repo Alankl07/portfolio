@@ -2,8 +2,11 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { URL_SERVER } from "./env";
+
 export const environment = {
   socketUrl: 'http://10.0.0.104:3000',
+  // socketUrl: URL_SERVER,
   production: false
 };
 
