@@ -1,6 +1,6 @@
 import { URL_SERVER } from "./env";
 
 export const environment = {
-  socketUrl: URL_SERVER,
+  socketUrl: 'https://socket-profile.cyclic.app',
   production: true
 };
