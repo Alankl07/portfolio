@@ -1,12 +1,6 @@
-import * as Io  from 'socket.io-client'
+import { io } from "socket.io-client";
 import { environment } from 'src/environments/environment'
 
-const socket = Io(environment.socketUrl, {
-    // Send auth token on connection, you will need to DI the Auth service above
-    // 'query': 'token=' + Auth.getToken()
-    path: '/socket.io',
-    transports: ['polling'],
-    secure: true,
-  })
+const socket = io(environment.socketUrl)
 
-export default socket
+export default socket 
