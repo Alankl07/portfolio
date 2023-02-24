@@ -1,1 +1,1 @@
-export const testeFle = '../../assets/image/img-teste.png'
+export const testeFle = './assets/image/img-teste.png'
