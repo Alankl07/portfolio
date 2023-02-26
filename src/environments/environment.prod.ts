@@ -1,4 +1,7 @@
+import { URL, URL_SERVER } from "./env";
+
 export const environment = {
-  socketUrl: 'https://ruby-cloudy-haddock.cyclic.app/',
+  url: URL,
+  socketUrl: URL_SERVER,
   production: true
 };

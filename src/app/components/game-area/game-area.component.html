@@ -1,6 +1,6 @@
 <div class="divContainer" id="gameArea">
     <div *ngIf="!controlConnect" class="divQrCode" #container>
-        <qrcode [qrdata]="'https://alankl07.github.io/portfolio/control'" [width]="400" [errorCorrectionLevel]="'M'"></qrcode>
+        <qrcode [qrdata]="'{{url}}'" [width]="400" [errorCorrectionLevel]="'M'"></qrcode>
         <label>Scanei o QRcode acima.</label>
     </div>
     <div *ngIf="controlConnect" class="divContainerTv">
