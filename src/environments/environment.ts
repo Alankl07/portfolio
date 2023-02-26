@@ -5,7 +5,7 @@
 import { URL_SERVER } from "./env";
 
 export const environment = {
-  socketUrl: 'http://10.0.0.104:3000',
+  socketUrl: 'http://192.168.1.6:3000',
   // socketUrl: URL_SERVER,
   production: false
 };

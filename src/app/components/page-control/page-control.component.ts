@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 import socket from 'src/socket/socket';
 // import { Socket } from 'ngx-socket-io';
 
@@ -10,6 +11,8 @@ import socket from 'src/socket/socket';
 export class PageControlComponent implements OnInit {
 
   constructor() { }
+
+  url = environment.url
 
   ngOnInit(): void {
     this.emitTheConnection()
